@@ -1,54 +1,5 @@
-// 定义全局变量
-@colorWhite: #fff;
-@colorBlue: #00a8ff;
-
-
-//重置顶部的导航栏效果
-.navbar{
-    margin-bottom: 0px;
-}
-
-.navbar-inverse{
-    .navbar-brand{
-        color: @colorWhite;
-        font-size: 24px;
-        font-style: italic;
-
-        span{
-            font-size: 16px;
-            margin-right: 5px;
-        }
-    }
-
-    .navbar-nav{
-        &>li{
-            &>a{
-                color: #fff;
-
-                &:hover{
-                    color:@colorBlue;
-                    text-decoration: underline;
-                }
-            }
-        }
-    }
-}
-
-.navbar-default .navbar-nav > li > a{
-    line-height: 38px;
-    font-size: 16px;
-    text-align: center;
-
-    &:hover{
-        background-color: #efeeee;
-        color: @colorBlue;
-    }
-}
-
-//工具提示的图片大小
-.tooltip img{
-    width: 100px;
-}
+// 引入页头样式
+@import url("header.less");
 
 //三大特色
 #feature{
@@ -78,3 +29,66 @@
         }
     }
 }
+
+//首页的面板样式的重置
+.panel-default{
+   .panel-heading{
+        background-color: transparent;
+        border: none;
+        border-bottom: solid 1px #ddd;
+        padding: 0;
+
+        h2{
+            border-bottom: solid #2e8ece 3px;
+            margin: 0px;
+            padding: 10px 0px;
+            color: #2e8ece;
+            font-weight: bold;
+            font-size: 24px;
+        }
+
+        a{
+            margin-top: 20px;
+        }
+    }
+
+    .panel-body{
+        padding: 20px 0px;
+
+        ul{
+            padding: 0px;
+            margin: 0px;
+            list-style: none;
+
+            li{
+                line-height: 36px;
+                border-bottom: dotted 1px #ccc;
+                
+                a{
+                    color: #666;
+
+                    &:hover{
+                        color: @colorBlue; 
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.panel{
+    border: none;
+    box-shadow: none;
+}
+
+
+//解决小屏的版面错乱问题
+@media all and (max-width:520px){
+    .hideTitle{
+        display: none;
+    }
+}
+
+// 引入页脚
+@import url("footer.less");

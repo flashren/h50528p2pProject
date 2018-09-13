@@ -16,55 +16,10 @@
     <![endif]-->
 </head>
 <body>
-    <!-- 头部 -->
-    <!-- 顶部导航 -->
-    <nav class="navbar navbar-inverse">
-        <div class="container">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="#"><span class="glyphicon glyphicon-phone-alt"></span>028-86261949</a>
-            </div>
-
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav navbar-right">
-                <li><a href="#">首页</a></li>
-                <li><a href="#">小强</a></li>
-                <li><a href="#">赶快充值</a></li>
-                <li><a href="#">注销</a></li>
-                <li><a href="#">帮助</a></li>
-                <li><a href="#" data-toggle="tooltip" data-placement="bottom" data-html="true" title="<img src='./images/contract.png'/>">联系客服</a></li>
-            </ul>
-            </div><!-- /.navbar-collapse -->
-        </div><!-- /.container-fluid -->
-    </nav>
-    <!-- 主导航 -->
-    <nav class="navbar navbar-default">
-        <div class="container">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-            <a class="navbar-brand" href="#">
-                <img src="./images/logo.png" alt="网站logo"/>
-            </a>
-            </div>
-
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <ul class="nav navbar-nav">
-                <li class="active"><a href="#">首页</a></li>
-                <li><a href="#">我要投资</a></li>
-                <li><a href="#">我要借款</a></li>
-                <li><a href="#">个人中心</a></li>
-                <li><a href="#">新手指引</a></li>
-                <li><a href="#">关于我们</a></li>
-            </ul>
-        </div><!-- /.container-fluid -->
-    </nav>
+    <!-- 引入头部信息 -->
+    <?php
+       require_once("header.php");
+    ?>
 
     <!-- 轮播图 -->
     <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
@@ -119,13 +74,141 @@
     </div>
 
     <!-- 投资信息 -->
-    <section></section>
+    <div class="container">
+        <div class="panel panel-default">
+            <!-- 标题 -->
+            <div class="panel-heading clearfix"> 
+                <h2 class="pull-left">进行中借款</h2>
+                <a class="pull-right" href="#">进入投资列表</a>
+            </div>
+            <!-- 内容表格 -->
+            <table class="table table-hover">
+                <thead>
+                    <tr>						
+                    <th>借款人</th>
+                    <th class="hideTitle">借款标题</th>
+                    <th>年利率</th>
+                    <th>金额</th>
+                    <th class="hideTitle">还款方式</th>
+                    <th>进度</th>
+                    <th>操作</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>					
+                    <td>张三</td>
+                    <td class="hideTitle">给我2000度过难关</td>
+                    <td>10.00%</td>
+                    <td>2,000.00</td>
+                    <td class="hideTitle">按月分期还款</td>
+                    <td>78.00%</td>
+                    <td><button type="button" class="btn btn-danger btn-sm">查看</button></td>
+                    </tr>
+                    <tr>					
+                    <td>张三</td>
+                    <td class="hideTitle">给我2000度过难关</td>
+                    <td>10.00%</td>
+                    <td>2,000.00</td>
+                    <td class="hideTitle">按月分期还款</td>
+                    <td>78.00%</td>
+                    <td><button type="button" class="btn btn-danger btn-sm">查看</button></td>
+                    </tr>
+                    <tr>					
+                    <td>张三</td>
+                    <td class="hideTitle">给我2000度过难关</td>
+                    <td>10.00%</td>
+                    <td>2,000.00</td>
+                    <td class="hideTitle">按月分期还款</td>
+                    <td>78.00%</td>
+                    <td><button type="button" class="btn btn-danger btn-sm">查看</button></td>
+                    </tr>
+                    <tr>					
+                    <td>张三</td>
+                    <td class="hideTitle">给我2000度过难关</td>
+                    <td>10.00%</td>
+                    <td>2,000.00</td>
+                    <td class="hideTitle">按月分期还款</td>
+                    <td>78.00%</td>
+                    <td><button type="button" class="btn btn-danger btn-sm">查看</button></td>
+                    </tr>
+                </tbody>
+                </table>
+        </div>
+    </div>
 
     <!-- 新闻文章 -->
-    <section></section>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-sm-12 col-xs-12">
+                <div class="panel panel-default">
+                <div class="panel-heading clearfix">
+                    <h2 class="pull-left">最新资讯</h2>
+                    <a class="pull-right" href="#">更多>></a>
+                </div>
+                <div class="panel-body">
+                    <ul>
+                        <li><a href="#">央视力挺互联网金融<span class="pull-right">发表日期：2015-03-23</span></a></li>
+                        <li><a href="#">央视力挺互联网金融<span class="pull-right">发表日期：2015-03-23</span></a></li>
+                        <li><a href="#">央视力挺互联网金融<span class="pull-right">发表日期：2015-03-23</span></a></li>
+                    </ul>
+                </div>
+                </div>
+            </div>
 
-    <!-- 页脚 -->
-    <footer></footer>
+            <div class="col-md-6 col-sm-12 col-xs-12">
+                <div class="panel panel-default">
+                <div class="panel-heading clearfix">
+                    <h2 class="pull-left">最新资讯</h2>
+                    <a class="pull-right" href="#">更多>></a>
+                </div>
+                <div class="panel-body">
+                    <ul>
+                        <li><a href="#">央视力挺互联网金融<span class="pull-right">发表日期：2015-03-23</span></a></li>
+                        <li><a href="#">央视力挺互联网金融<span class="pull-right">发表日期：2015-03-23</span></a></li>
+                        <li><a href="#">央视力挺互联网金融<span class="pull-right">发表日期：2015-03-23</span></a></li>
+                    </ul>
+                </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-sm-12 col-xs-12">
+                <div class="panel panel-default">
+                <div class="panel-heading clearfix">
+                    <h2 class="pull-left">最新资讯</h2>
+                    <a class="pull-right" href="#">更多>></a>
+                </div>
+                <div class="panel-body">
+                    <ul>
+                        <li><a href="#">央视力挺互联网金融<span class="pull-right">发表日期：2015-03-23</span></a></li>
+                        <li><a href="#">央视力挺互联网金融<span class="pull-right">发表日期：2015-03-23</span></a></li>
+                        <li><a href="#">央视力挺互联网金融<span class="pull-right">发表日期：2015-03-23</span></a></li>
+                    </ul>
+                </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-sm-12 col-xs-12">
+                <div class="panel panel-default">
+                <div class="panel-heading clearfix">
+                    <h2 class="pull-left">最新资讯</h2>
+                    <a class="pull-right" href="#">更多>></a>
+                </div>
+                <div class="panel-body">
+                    <ul>
+                        <li><a href="#">央视力挺互联网金融<span class="pull-right">发表日期：2015-03-23</span></a></li>
+                        <li><a href="#">央视力挺互联网金融<span class="pull-right">发表日期：2015-03-23</span></a></li>
+                        <li><a href="#">央视力挺互联网金融<span class="pull-right">发表日期：2015-03-23</span></a></li>
+                    </ul>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 引入页脚 -->
+    <?php
+       require_once("footer.php");
+    ?>
 
     <!-- 引入jquery -->
     <script src="./lib/jquery/jquery.min.js"></script>

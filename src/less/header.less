@@ -1,0 +1,51 @@
+// 定义全局变量
+@colorWhite: #fff;
+@colorBlue: #00a8ff;
+
+
+//重置顶部的导航栏效果
+.navbar{
+    margin-bottom: 0px;
+}
+
+.navbar-inverse{
+    .navbar-brand{
+        color: @colorWhite;
+        font-size: 24px;
+        font-style: italic;
+
+        span{
+            font-size: 16px;
+            margin-right: 5px;
+        }
+    }
+
+    .navbar-nav{
+        &>li{
+            &>a{
+                color: #fff;
+
+                &:hover{
+                    color:@colorBlue;
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}
+
+.navbar-default .navbar-nav > li > a{
+    line-height: 38px;
+    font-size: 16px;
+    text-align: center;
+
+    &:hover{
+        background-color: #efeeee;
+        color: @colorBlue;
+    }
+}
+
+//工具提示的图片大小
+.tooltip img{
+    width: 100px;
+}
