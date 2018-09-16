@@ -42,7 +42,7 @@
                 <h3 class="panel-title">用户注册</h3>
             </div>
             <div class="panel-body">
-                <form id="regForm" class="form-horizontal">
+                <form id="regForm" class="form-horizontal" method="post">
                 <div class="form-group">
                     <label for="inputEmail3" class="col-sm-3 control-label">用户名：</label>
                     <div class="col-sm-9">

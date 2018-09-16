@@ -7,6 +7,8 @@
     <title>用户登录-p2p金融借贷平台</title>
     <!-- 引入bootstrap核心库 -->
     <link rel="stylesheet" href="./lib/bootstrap/css/bootstrap.min.css">
+    <!-- 引入bootstrapValidator的样式 -->
+    <link rel="stylesheet" href="./lib/bootstrapValidator/css/bootstrapValidator.min.css">
     <!-- 引入编译和压缩后的css文件 -->
     <link rel="stylesheet" href="./dist/css/minCss/regLogin.min.css">
     <!-- 兼容IE9以下的浏览器 -->
@@ -40,7 +42,7 @@
                 <h3 class="panel-title">用户登录</h3>
             </div>
             <div class="panel-body">
-                <form class="form-horizontal">
+                <form id="loginForm" class="form-horizontal" method="post">
                 <div class="form-group">
                     <label for="inputEmail3" class="col-sm-3 control-label">用户名：</label>
                     <div class="col-sm-9">
@@ -69,11 +71,33 @@
     require_once("footer.php");
     ?>
 
+    <!-- 蒙层的html结构 -->
+    <div class="modal fade" id="msgShowModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="msgShowTitle">标题</h4>
+        </div>
+        <div class="modal-body" id="msgShowContent">
+            内容
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">关闭窗口</button>
+        </div>
+        </div>
+    </div>
+    </div>
+
     <!-- 引入jquery -->
     <script src="./lib/jquery/jquery.min.js"></script>
     <!-- 引入bootstrap核心库 -->
     <script src="./lib/bootstrap/js/bootstrap.min.js"></script>
+     <!-- 引入bootstrapValidator的JS库 -->
+     <script src="./lib/bootstrapValidator/js/bootstrapValidator.min.js"></script>
     <!-- 引入自定义的效果 -->
     <script src="./dist/js/p2p.min.js"></script>
+    <!-- 表单验证的js效果 -->
+    <script src="./dist/js/formcheck.min.js"></script>
 </body>
 </html>

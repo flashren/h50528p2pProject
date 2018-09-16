@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script src="../lib/jquery/jquery.min.js"></script>
+    <script>
+        //一定要实现前端和后端的分离： 前端向api发起请求，后端api响应请求并返回请求结果，前端拿到结果，根据业务逻辑渲染前端页面。
+        let url = 'https://c.y.qq.com/v8/fcg-bin/fcg_v8_toplist_cp.fcg?g_tk=5381&uin=0&format=json&inCharset=utf-8&outCharset=utf-8&notice=0&platform=h5&needNewCode=1&tpl=3&page=detail&type=top&topid=27&_=1519963122923';
+        $.ajax({
+          url:url,
+          type:"get",
+          dataType:'jsonp',
+          jsonp: "jsonpCallback",
+          scriptCharset: 'GBK',//解决中文乱码
+          success: function(data){
+            //最新音乐数据
+            console.log("音乐数据",data);
+          },
+          error:function (e) {
+            console.log('error',e.message);
+          }
+        });
+    </script>
+</body>
+</html>
